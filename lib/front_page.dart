@@ -35,8 +35,21 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Icon(Icons.calculate,size: 100,),
+    return const Scaffold(
+       body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.calculate,size: 100,),
+          Text('Calculator',style: TextStyle(color: Colors.black,fontWeight:FontWeight.bold,fontSize: 40)),
+          
+          
+          ],
+        )
+        
+      
+        
+      ),
     );
   }
 }

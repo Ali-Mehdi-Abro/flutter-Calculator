@@ -90,37 +90,100 @@ class _CalculatorState extends State<Calculator> {
             ),
               SizedBox(height: 20),
               
-              
+
+          
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+
+
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                      CalculatorButton(buttonText: '%', onPressed: (){}),
-                      CalculatorButton(buttonText: 'CE', onPressed: (){}),
-                      CalculatorButton(icon: Icons.backspace_rounded, onPressed: (){}),
-                      CalculatorButton(buttonText: '/', onPressed: (){}),
+                      CalculatorButton(buttonText: '%', onPressed: (){
+                        setState(() {
+                          userInput = '%';
+                        });
+                      }),
+                      CalculatorButton(buttonText: 'CE', onPressed: (){
+                        setState(() {
+                          userInput = 'CE';
+                        });
+                      }),
+                      CalculatorButton(icon: Icons.backspace_rounded, onPressed: (){
+                        setState(() {
+                          userInput = 'clear';
+                        });
+                      }),
+                      CalculatorButton(buttonText: '/', onPressed: (){
+                        setState(() {
+                          userInput = '/';
+                        });
+                      }),
                       ],
                     ),
+
+
+
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                      CalculatorButton(buttonText: '7', onPressed: (){}),
-                      CalculatorButton(buttonText: '8', onPressed: (){}),
-                      CalculatorButton(buttonText: '9', onPressed: (){}),
-                      CalculatorButton(buttonText: 'x', onPressed: (){}),
+                      CalculatorButton(buttonText: '7', onPressed: (){
+                        setState(() {
+                          userInput = '7';
+                        });
+                      }),
+                      CalculatorButton(buttonText: '8', onPressed: (){
+                        setState(() {
+                          userInput = '8';
+                        });
+                      }),
+                      CalculatorButton(buttonText: '9', onPressed: (){
+                        setState(() {
+                          userInput = '9';
+                        });
+                      }),
+                      CalculatorButton(buttonText: 'x', onPressed: (){
+                        setState(() {
+                          userInput = '*';
+                        });
+                      }),
                       ],
-                    ),Row(
+                    ),
+                    
+                    
+                    
+                    
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                      CalculatorButton(buttonText: '4', onPressed: (){}),
-                      CalculatorButton(buttonText: '5', onPressed: (){}),
-                      CalculatorButton(buttonText: '6', onPressed: (){}),
-                      CalculatorButton(buttonText: '-', onPressed: (){}),
+                      CalculatorButton(buttonText: '4', onPressed: (){
+                        setState(() {
+                          userInput = '4';
+                        });
+                      }),
+                      CalculatorButton(buttonText: '5', onPressed: (){
+                        setState(() {
+                          userInput = '5';
+                        });
+                      }),
+                      CalculatorButton(buttonText: '6', onPressed: (){
+                        setState(() {
+                          userInput = '6';
+                        });
+                      }),
+                      CalculatorButton(buttonText: '-', onPressed:  (){
+                        setState(() {
+                          userInput = '-';
+                        });
+                      }),
                       ],
-                    ),Row(
+                    ),
+                    
+                    
+                    
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                       CalculatorButton(buttonText: '1', onPressed: (){
@@ -128,21 +191,60 @@ class _CalculatorState extends State<Calculator> {
                           userInput = '1';
                         });
                       }),
-                      CalculatorButton(buttonText: '2', onPressed: (){}),
-                      CalculatorButton(buttonText: '3', onPressed: (){}),
-                      CalculatorButton(buttonText: '+', onPressed: (){}),
-                      ],
-                    ),Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                      CalculatorButton(buttonText: '+/-', onPressed: (){}),
-                      CalculatorButton(buttonText: '0', onPressed: (){}),
-                      CalculatorButton(buttonText: '.', onPressed: (){}),
-                      CalculatorButton(buttonText: '=', onPressed: (){}),
+                      CalculatorButton(buttonText: '2', onPressed: (){
+                        setState(() {
+                          userInput = '2';
+                        });
+                      }),
+                      CalculatorButton(buttonText: '3', onPressed: (){
+                        setState(() {
+                          userInput = '3';
+                        });
+                      }),
+                      CalculatorButton(buttonText: '+', onPressed: (){
+                        setState(() {
+                          userInput = '+';
+                        });
+                      }),
                       ],
                     ),
+                    
+                    
+                    
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                      CalculatorButton(buttonText: '+/-', onPressed: (){
+                        setState(() {
+                          userInput = '+/-';
+                        });
+                      }),
+                      CalculatorButton(buttonText: '0', onPressed: (){
+                        setState(() {
+                          userInput = '0';
+                        });
+                      }),
+                      CalculatorButton(buttonText: '.', onPressed: (){
+                        setState(() {
+                          userInput = '-';
+                        });
+                      }),
+                      CalculatorButton(buttonText: '=', onPressed: (){
+                        setState(() {
+                          userInput = '=';
+                        });
+                      }),
+                      ],
+                    ),
+
+
+
                   ],
                 ),
+
+
+
+
                       //       child: GridView.count(
                       //         padding: EdgeInsets.all(10), 
                       //         // childAspectRatio: 1.5,
@@ -160,20 +262,19 @@ class _CalculatorState extends State<Calculator> {
                       //           );
                       //         }).toList(),
                       //       ),
-              ),
-              
-              
-              
-              
-                        ],
-                      ),
-            ),
-      ),
-    ),
-    );
-  }
-}
-
+                  // ),
+            
+                              
+                            ),
+                        ]
+                      )
+                    )
+                  )
+                )
+              );
+            }
+          }
+    
 class CalculatorButton extends StatelessWidget {
   final String? buttonText;
   final Function onPressed;
